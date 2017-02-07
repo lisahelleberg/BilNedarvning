@@ -15,14 +15,29 @@ namespace BilNedarvning
         public string RegistreringsNr;
         public double KmPrLiter;
 
+        #region
+        /// <summary>
+        /// Udregning af Registreringsafgiften efter bilens pris ex afgift samt købsår
+        /// </summary>
+        /// <returns></returns>
         public virtual double RegistreringsAfgift()
         {
-            if (KøbsÅr <= 2014)
+            if (KøbsÅr <= 2014 && BilPrisExAfgift < 80500)
+            {
+                double RegistreringsAfgiften = (1.05 * BilPrisExAfgift);
+                return RegistreringsAfgiften;
+            }
+            else if (KøbsÅr <= 2014 && BilPrisExAfgift >= 80500)
             {
                 double RegistreringsAfgiften = ((1.05 * 80500) + (1.80 * (BilPrisExAfgift - 80500)));
                 return RegistreringsAfgiften;
             }
-            else if (KøbsÅr >= 2015)
+            else if (KøbsÅr >= 2015 && BilPrisExAfgift < 81700)
+            {
+                double RegistreringsAfgiften = (1.05 * BilPrisExAfgift);
+                return RegistreringsAfgiften;
+            }
+            else if (KøbsÅr >= 2015 && BilPrisExAfgift >= 81700)
             {
                 double RegistreringsAfgiften = ((1.05 * 81700) + (1.80 * (BilPrisExAfgift - 81700)));
                 return RegistreringsAfgiften;
@@ -32,6 +47,7 @@ namespace BilNedarvning
                 return 0;
             }
         }
+        #endregion
 
         public double Totalpris()
         {
@@ -44,7 +60,7 @@ namespace BilNedarvning
         }
 
         // konstruktor
-        public Bil(string Mærke, int BilprisExAfgift, int KøbsÅr, double KmPrLiter)
+        public Bil(string Mærke, int BilprisExAfgift, int KøbsÅr, double KmPrLiter, string RegistreringsNr)
         {
 
         }

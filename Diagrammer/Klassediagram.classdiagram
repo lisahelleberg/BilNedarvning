@@ -1,20 +1,118 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="0bc015e7-e5fc-4a2f-ba1c-f7bc79ea953a" name="Klassediagram" linkedPackageId="bc00c398-75f6-4f2f-b4d1-7bc95d59e379" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="b819bd3a-3b20-4ceb-833b-6b8bc7476378">
-      <profileInstance Id="bcc837c3-0ec4-47e7-ade7-656fcbc427b5" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="ee5f3c81-7df0-4dbf-bd8c-be29f068e44f">
-      <profileInstance Id="6f962766-76df-452b-95c9-831e4ba0d9e3" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="27577cb0-3be1-44c0-b5d5-689c743e0590" name="Bil" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5610ac51-0557-4321-96bb-f818900ae678" />
+        <ownedAttributesInternal>
+          <property Id="dc434823-622f-4e80-847a-f0c39c8b5560" name="KmPrLiter" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7443b6da-98d5-4263-b828-e9e413723ee4" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b830611f-ac83-4a8d-94fa-4b24b06942a2" LastKnownName="double" />
+            </type_NamedElement>
+          </property>
+          <property Id="8e7736c5-647a-40f1-abdc-f3ee4ed5b50d" name="KøbsÅr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1749e82c-9b3b-42b7-915c-4069b45eff4c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="748c04a0-d7fe-4c7b-921f-448cf6528bee" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="dafd2cf8-a6e3-45ef-a0d3-0cf875abffc5" name="Mærke" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b76d64a4-e802-46b1-a9ea-fff569cd74d1" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b12718bf-5503-4120-832a-1a24dbf7775d" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="86b6b52a-7cc6-4907-b724-dfc89cb63994" name="PrisExAfgift" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3ab98a6b-bb63-4d92-840b-e9023b63c841" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="748c04a0-d7fe-4c7b-921f-448cf6528bee" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="e0f9687d-4f6d-4887-b3e5-23acd7cc73f9" name="RegistreringsNr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e3bc04ca-eab4-4680-8aac-2691af5baa14" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b12718bf-5503-4120-832a-1a24dbf7775d" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="50b6a634-f81e-4411-87e4-bb22b8c7ac7d" name="Bil" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ac160def-3e91-415c-8ab2-5a97afab6df2" />
+          </operation>
+          <operation Id="aae41d8b-b445-4d89-8dc2-7ae620fa43b9" name="HalvårligEjerafgift" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="70b518a4-e2c1-4efa-84e7-2d715889832c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="78c77b14-e431-4178-9159-fd6f58672b73" direction="Return" isUnique="false">
+                  <elementDefinition Id="27915dc3-0738-449e-8f90-17c8e8687c28" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="748c04a0-d7fe-4c7b-921f-448cf6528bee" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="0d814c5f-bfec-4720-a773-e113770d2687" name="RegistreringsAfgift" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2bc8fd71-804b-44b4-9ee8-1fc78fb7e4ab" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f1191bd9-147d-460f-9253-666271033df5" direction="Return" isUnique="false">
+                  <elementDefinition Id="3c9d9417-c3f4-4ee2-a444-38b36563c037" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b830611f-ac83-4a8d-94fa-4b24b06942a2" LastKnownName="double" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="26fd29df-7cc1-4a8b-acef-d0655513120f" name="TotalPris" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="63d4c631-e87b-4af6-b1b7-87bf3a2a0642" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2b9222da-65d7-4991-9176-40cb810e46ff" direction="Return" isUnique="false">
+                  <elementDefinition Id="d015a9b3-1ac9-481f-ad9c-cbfd9fc8dd87" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="748c04a0-d7fe-4c7b-921f-448cf6528bee" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="748c04a0-d7fe-4c7b-921f-448cf6528bee" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="f7c89428-0010-47a9-bb24-17f8da447ad9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b830611f-ac83-4a8d-94fa-4b24b06942a2" name="double" isAbstract="false" isLeaf="false" cachedFullName="double">
+        <elementDefinition Id="16404864-c8cd-4bff-a375-9a47abe0f4ae" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b12718bf-5503-4120-832a-1a24dbf7775d" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="5d0bdede-4a21-49e9-af11-2bb03567d5a1" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
   <package Id="bc00c398-75f6-4f2f-b4d1-7bc95d59e379" name="Diagrammer">
     <elementDefinition Id="fd828f15-757c-46aa-a1c2-a8024eb6943b" />
+    <profileInstances>
+      <packageHasProfileInstances Id="b819bd3a-3b20-4ceb-833b-6b8bc7476378">
+        <profileInstance Id="bcc837c3-0ec4-47e7-ade7-656fcbc427b5" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="ee5f3c81-7df0-4dbf-bd8c-be29f068e44f">
+        <profileInstance Id="6f962766-76df-452b-95c9-831e4ba0d9e3" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>
