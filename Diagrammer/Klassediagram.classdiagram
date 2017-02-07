@@ -97,6 +97,55 @@
         <elementDefinition Id="5d0bdede-4a21-49e9-af11-2bb03567d5a1" />
       </referencedType>
     </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3c2330e1-8403-4349-b319-6dc43de9cc45" name="DieselBil" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2857d9ad-de0f-4196-b3e6-f72f4e01678f" />
+        <generalsInternal>
+          <generalization Id="c97fa80c-fc1f-402e-aab1-25fe6b10d39f" isSubstitutable="false">
+            <classMoniker Id="27577cb0-3be1-44c0-b5d5-689c743e0590" LastKnownName="Bil" />
+            <elementDefinition Id="8537cdc9-9fa3-4d7c-a3ab-e49694b5d508" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="d3f00ef6-0940-49d1-a622-6b764d69227b" name="Partikelfilter" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c21abb04-1486-43ba-ab21-1f4be707cb20" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="271437c7-7e63-40ba-aae7-d3d5a55e8971" LastKnownName="bool" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="0889a45a-076d-4e62-8de3-bbd2b403aa98" name="DieselBil" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e3f79af2-3790-4bb2-aee7-102481eba94a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7ccaf1d4-35e0-4eb8-b7d4-b696e1528905" name=") (+ 1 overload" direction="In" isUnique="false">
+                  <elementDefinition Id="b46babfa-141f-48d6-b4d6-5dd0b638c4f6" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="fb06c4a3-f61e-40f2-ab00-23bf0e9ca34c" name="HalvårligEjerAfgift" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f86b2aa0-1830-4c55-9f00-ff083d700680" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="08b42fa6-cd09-4487-90bf-a03770cfafa8" direction="Return" isUnique="false">
+                  <elementDefinition Id="57f3908a-6fba-4899-abde-a37e93dca8a5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="748c04a0-d7fe-4c7b-921f-448cf6528bee" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="271437c7-7e63-40ba-aae7-d3d5a55e8971" name="bool" isAbstract="false" isLeaf="false" cachedFullName="bool">
+        <elementDefinition Id="a565839c-87ca-4269-954c-b5981ac3a449" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="bc00c398-75f6-4f2f-b4d1-7bc95d59e379" name="Diagrammer">
     <elementDefinition Id="fd828f15-757c-46aa-a1c2-a8024eb6943b" />

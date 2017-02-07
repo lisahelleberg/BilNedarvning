@@ -27,11 +27,11 @@ namespace BilNedarvning
         {
             if (Partikelfilter == false)
             {
-                return base.HalvÅrligEjerafgift() + 500;
+                return 500;
             }
             else if (Partikelfilter == true) 
             {
-                return base.HalvÅrligEjerafgift();
+                return 0;
             }
             else
             {
