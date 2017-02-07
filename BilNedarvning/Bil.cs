@@ -61,6 +61,11 @@ namespace BilNedarvning
         public Bil(string Mærke, int BilPrisExAfgift, int KøbsÅr, double KmPrLiter, string RegistreringsNr)
         {
 
+            this.Mærke = Mærke;
+            this.BilPrisExAfgift = BilPrisExAfgift;
+            this.KøbsÅr = KøbsÅr;
+            this.KmPrLiter = KmPrLiter;
+            this.RegistreringsNr = RegistreringsNr;
         }
 
     }

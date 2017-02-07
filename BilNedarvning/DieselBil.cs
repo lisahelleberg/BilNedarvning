@@ -23,20 +23,41 @@ namespace BilNedarvning
             this.RegistreringsNr = RegistreringsNr;
         }
 
-        public override int HalvÅrligEjerafgift()
+        public int KmPrLiterAfgift()
         {
-            if (Partikelfilter == false)
+            if (KmPrLiter < 15)
             {
-                return 500;
+                return 2000;
             }
-            else if (Partikelfilter == true) 
+            if (KmPrLiter >= 15 && KmPrLiter < 25)
             {
-                return 0;
+                return 1000;
+            }
+            if (KmPrLiter >= 25)
+            {
+                return 350;
             }
             else
             {
                 return 0;
             }
+        }
+
+        public int PartikelfilterMonteret()
+        {
+            if (Partikelfilter == false)
+            {
+                return 500;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public override int HalvÅrligEjerafgift()
+        {
+            return KmPrLiterAfgift();
         }
 
         public string GetRegistreringsNr()
@@ -46,7 +67,7 @@ namespace BilNedarvning
 
         public int GetHalvÅrligEjerafgift()
         {
-            return HalvÅrligEjerafgift();
+            return HalvÅrligEjerafgift() + PartikelfilterMonteret();
         }
 
         //public void PrintInfo()
