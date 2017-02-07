@@ -47,8 +47,9 @@ namespace BilNedarvning
                 return 0;
             }
         }
-        #endregion
-
+#endregion
+        
+        
         public double Totalpris()
         {
             return RegistreringsAfgift() + BilPrisExAfgift;
@@ -60,9 +61,10 @@ namespace BilNedarvning
         }
 
         // konstruktor
-        public Bil(string Mærke, int BilprisExAfgift, int KøbsÅr, double KmPrLiter, string RegistreringsNr)
+        public Bil(string Mærke, int BilPrisExAfgift, int KøbsÅr, double KmPrLiter, string RegistreringsNr)
         {
 
         }
+
     }
 }
