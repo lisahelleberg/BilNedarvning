@@ -68,5 +68,7 @@ namespace BilNedarvning
             this.RegistreringsNr = RegistreringsNr;
         }
 
+        public abstract double RækkeVidde();
+
     }
 }

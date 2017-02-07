@@ -9,18 +9,20 @@ namespace BilNedarvning
     public class DieselBil : Bil
     {
         public bool Partikelfilter;
+        public double Tank;
 
         // Konstruktør med partikelfilter?
-        public DieselBil(string Mærke, int BilPrisExAfgift, int KøbsÅr, double KmPrLiter, string RegistreringsNr, bool Partikelfilter) : base(Mærke, BilPrisExAfgift, KøbsÅr, KmPrLiter, RegistreringsNr)
+        public DieselBil(string Mærke, int BilPrisExAfgift, int KøbsÅr, double KmPrLiter, string RegistreringsNr, bool Partikelfilter, double Tank) : base(Mærke, BilPrisExAfgift, KøbsÅr, KmPrLiter, RegistreringsNr)
         {
-            this.RegistreringsNr = RegistreringsNr;
             this.Partikelfilter = Partikelfilter;
+            this.Tank = Tank;
         }
 
         // Konstruktør med partikelfilter monteret
-        public DieselBil(string Mærke, int BilPrisExAfgift, int KøbsÅr, double KmPrLiter, string RegistreringsNr) : this(Mærke, BilPrisExAfgift, KøbsÅr, KmPrLiter, RegistreringsNr, true)
+        public DieselBil(string Mærke, int BilPrisExAfgift, int KøbsÅr, double KmPrLiter, string RegistreringsNr, double Tank) : this(Mærke, BilPrisExAfgift, KøbsÅr, KmPrLiter, RegistreringsNr, true, Tank)
         {
             this.RegistreringsNr = RegistreringsNr;
+            this.Tank = Tank;
         }
 
         public int KmPrLiterAfgift()
@@ -70,9 +72,9 @@ namespace BilNedarvning
             return HalvÅrligEjerafgift() + PartikelfilterMonteret();
         }
 
-        //public void PrintInfo()
-        //{
-        //    Console.WriteLine($"Registreringsnummer: {GetRegistreringsNr()}, Halvårlig ejerafgift: {GetHalvÅrligEjerafgift()}");
-        //}
+        public override double RækkeVidde()
+        {
+            return Tank * KmPrLiter;
+        }
     }
 }

@@ -267,6 +267,30 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="d13f60de-f761-4d94-9f3f-2ba4da24717c"
+            name="RækkeVidde"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4a2e126a-a33d-4657-a166-df363c71fe10"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="16404864-c8cd-4bff-a375-9a47abe0f4ae"
+                      LastKnownName="double"
+                      LastKnownLocation="Diagrammer.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -316,6 +340,24 @@
                 LastKnownLocation="Diagrammer.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="26599c29-7539-4603-b384-b6959f33697b"
+            name="Tank"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="f7c89428-0010-47a9-bb24-17f8da447ad9"
+                LastKnownName="int"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -360,6 +402,30 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="f72e59a5-47f6-4cdd-a9d8-6d0da676e5f9"
+            name="Rækkevidde"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="40c7b8f1-ea8b-45d7-b90e-f41d31005f4a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="16404864-c8cd-4bff-a375-9a47abe0f4ae"
+                      LastKnownName="double"
+                      LastKnownLocation="Diagrammer.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -367,6 +433,93 @@
       <undefinedType
         Id="a565839c-87ca-4269-954c-b5981ac3a449"
         name="bool" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="627e8220-06b4-46f6-8a3b-06a78fde22f3"
+        name="BenzinBil"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="9eb709a3-492f-489d-b7cb-6cc7cddc8304"
+            name="Tank"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="f7c89428-0010-47a9-bb24-17f8da447ad9"
+                LastKnownName="int"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="2e1ead60-af1b-4730-8bb7-6edbf9182242"
+            name="BenzinBil"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="53c64620-5f01-4605-8d8c-d111cadbba40"
+            name="HalvårligEjerafgift"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8a01483c-c682-4551-affe-842cfb4a873c"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f7c89428-0010-47a9-bb24-17f8da447ad9"
+                      LastKnownName="int"
+                      LastKnownLocation="Diagrammer.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3809242b-27bd-4586-a305-18e3d668ca56"
+            name="RækkeVidde"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9e50266b-b1d1-40c5-a991-02d2ffbfc03b"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="16404864-c8cd-4bff-a375-9a47abe0f4ae"
+                      LastKnownName="double"
+                      LastKnownLocation="Diagrammer.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

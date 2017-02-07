@@ -79,6 +79,19 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation Id="67c82d29-0be3-42b7-9846-1d6ceff6dce9" name="RækkeVidde" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d13f60de-f761-4d94-9f3f-2ba4da24717c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4b75ce9a-7248-430a-91ad-859e72bec755" direction="Return" isUnique="false">
+                  <elementDefinition Id="4a2e126a-a33d-4657-a166-df363c71fe10" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b830611f-ac83-4a8d-94fa-4b24b06942a2" LastKnownName="double" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -113,6 +126,12 @@
               <referencedTypeMoniker Id="271437c7-7e63-40ba-aae7-d3d5a55e8971" LastKnownName="bool" />
             </type_NamedElement>
           </property>
+          <property Id="62987d44-5ebd-4225-9d5d-26c567e025be" name="Tank" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="26599c29-7539-4603-b384-b6959f33697b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="748c04a0-d7fe-4c7b-921f-448cf6528bee" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="0889a45a-076d-4e62-8de3-bbd2b403aa98" name="DieselBil" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -138,6 +157,19 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation Id="21cc7a50-0869-41eb-bda0-eea12ffd0c74" name="Rækkevidde" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f72e59a5-47f6-4cdd-a9d8-6d0da676e5f9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7f086902-901e-4a5c-8bdc-096ba0c96e3c" direction="Return" isUnique="false">
+                  <elementDefinition Id="40c7b8f1-ea8b-45d7-b90e-f41d31005f4a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b830611f-ac83-4a8d-94fa-4b24b06942a2" LastKnownName="double" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -146,6 +178,50 @@
         <elementDefinition Id="a565839c-87ca-4269-954c-b5981ac3a449" />
       </referencedType>
     </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="47887ba6-e96a-4daa-b6d7-c81210601e84" name="BenzinBil" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="627e8220-06b4-46f6-8a3b-06a78fde22f3" />
+        <ownedAttributesInternal>
+          <property Id="5597ff1e-13d8-47a4-8c15-a97081036162" name="Tank" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9eb709a3-492f-489d-b7cb-6cc7cddc8304" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="748c04a0-d7fe-4c7b-921f-448cf6528bee" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="1963a4bc-a3a3-4ac8-8bce-163ebc74115f" name="BenzinBil" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2e1ead60-af1b-4730-8bb7-6edbf9182242" />
+          </operation>
+          <operation Id="af9fe9e1-3474-4954-9fb3-c95465b5a270" name="HalvårligEjerafgift" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="53c64620-5f01-4605-8d8c-d111cadbba40" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a89984ee-7746-4b0b-8348-32abd4ef5e32" direction="Return" isUnique="false">
+                  <elementDefinition Id="8a01483c-c682-4551-affe-842cfb4a873c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="748c04a0-d7fe-4c7b-921f-448cf6528bee" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a5aa2910-fdc6-4f96-89cf-c4170b27b362" name="RækkeVidde" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3809242b-27bd-4586-a305-18e3d668ca56" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3dd6b47d-867e-41b0-8f32-22a0fb43516f" direction="Return" isUnique="false">
+                  <elementDefinition Id="9e50266b-b1d1-40c5-a991-02d2ffbfc03b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b830611f-ac83-4a8d-94fa-4b24b06942a2" LastKnownName="double" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="bc00c398-75f6-4f2f-b4d1-7bc95d59e379" name="Diagrammer">
     <elementDefinition Id="fd828f15-757c-46aa-a1c2-a8024eb6943b" />
