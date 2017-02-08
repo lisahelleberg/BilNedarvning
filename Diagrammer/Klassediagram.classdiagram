@@ -5,12 +5,6 @@
       <class Id="27577cb0-3be1-44c0-b5d5-689c743e0590" name="Bil" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="5610ac51-0557-4321-96bb-f818900ae678" />
         <ownedAttributesInternal>
-          <property Id="dc434823-622f-4e80-847a-f0c39c8b5560" name="KmPrLiter" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="7443b6da-98d5-4263-b828-e9e413723ee4" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="b830611f-ac83-4a8d-94fa-4b24b06942a2" LastKnownName="double" />
-            </type_NamedElement>
-          </property>
           <property Id="8e7736c5-647a-40f1-abdc-f3ee4ed5b50d" name="KøbsÅr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="1749e82c-9b3b-42b7-915c-4069b45eff4c" />
             <type_NamedElement>
@@ -132,6 +126,12 @@
               <referencedTypeMoniker Id="748c04a0-d7fe-4c7b-921f-448cf6528bee" LastKnownName="int" />
             </type_NamedElement>
           </property>
+          <property Id="0858d40e-0356-4e4b-a2c3-cb64b36f468b" name="KmPrLiter" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3bf3bbb1-c2e5-4b58-b69d-32ad5f475e1f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b830611f-ac83-4a8d-94fa-4b24b06942a2" LastKnownName="double" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="0889a45a-076d-4e62-8de3-bbd2b403aa98" name="DieselBil" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -181,11 +181,23 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="47887ba6-e96a-4daa-b6d7-c81210601e84" name="BenzinBil" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="627e8220-06b4-46f6-8a3b-06a78fde22f3" />
+        <generalsInternal>
+          <generalization Id="ea4f7a2a-935d-4144-b455-8d19c1d501cf" isSubstitutable="false">
+            <classMoniker Id="27577cb0-3be1-44c0-b5d5-689c743e0590" LastKnownName="Bil" />
+            <elementDefinition Id="6db9a75e-fa22-439e-baf6-06886c6a2e66" />
+          </generalization>
+        </generalsInternal>
         <ownedAttributesInternal>
           <property Id="5597ff1e-13d8-47a4-8c15-a97081036162" name="Tank" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="9eb709a3-492f-489d-b7cb-6cc7cddc8304" />
             <type_NamedElement>
               <referencedTypeMoniker Id="748c04a0-d7fe-4c7b-921f-448cf6528bee" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="902fa210-d203-40d0-af38-bd594789f7b3" name="KmPrLiter" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="481bb12a-a72b-44b9-9fcc-f4d8220fca7e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b830611f-ac83-4a8d-94fa-4b24b06942a2" LastKnownName="double" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -214,6 +226,75 @@
                   <elementDefinition Id="9e50266b-b1d1-40c5-a991-02d2ffbfc03b" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="b830611f-ac83-4a8d-94fa-4b24b06942a2" LastKnownName="double" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="292b2b16-9114-434a-8f60-2f776b4d51d8" name="ElBil" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="84db3eac-e057-4517-a930-913fa2aa105d" />
+        <generalsInternal>
+          <generalization Id="4d078719-f96e-47ae-817c-9a2ef9e4188a" isSubstitutable="false">
+            <classMoniker Id="27577cb0-3be1-44c0-b5d5-689c743e0590" LastKnownName="Bil" />
+            <elementDefinition Id="fbdbc05f-89cc-4df4-9caf-7ed86de554b9" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="8bc182e6-63e6-4117-b8f1-0dbba9ec8361" name="BatteriKapacitet" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="478e5b2b-8bbb-440b-b701-f7fde6239be2" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="748c04a0-d7fe-4c7b-921f-448cf6528bee" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="fb4140e5-5cbb-4a41-8524-5dd0075a40a4" name="KmPrKw" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="97bce706-24d1-4861-b61e-51324bc0a299" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="748c04a0-d7fe-4c7b-921f-448cf6528bee" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="a1e1e527-2a2a-4616-8c48-086a4a8c3706" name="ElBil" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="89b3292e-cde3-4297-b55e-1c1630966680" />
+          </operation>
+          <operation Id="798f6ded-dfc5-4493-9f77-1d99b985f0de" name="HalvårligEjerafgift" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4096fe33-34db-4094-95b6-509c36104d3c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="85f478c8-cf73-47b7-ab3f-71e8d787fa8a" direction="Return" isUnique="false">
+                  <elementDefinition Id="9346dd5e-2bf9-44e2-9d5b-4fc47505153d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="748c04a0-d7fe-4c7b-921f-448cf6528bee" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="00505ff3-8bcb-4b89-9641-af085e0beb0f" name="RækkeVidde" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2cb66ede-e2a6-4f45-9cb5-6cae6adf28f8" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="198c01fa-69df-48d3-b993-000e278fb4b8" direction="Return" isUnique="false">
+                  <elementDefinition Id="08123396-a422-483d-bd56-f66df54051b5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="748c04a0-d7fe-4c7b-921f-448cf6528bee" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="37f2b1d6-774e-4b93-a699-1577cca7e755" name="RegistreringsAfgift" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c027ff86-dd84-482d-bab0-917991e76e16" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="765dc728-c6a3-4cbe-90c2-a76019bbbe63" direction="Return" isUnique="false">
+                  <elementDefinition Id="2fa02828-c3b5-4964-bb4f-2d5420f63b16" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="748c04a0-d7fe-4c7b-921f-448cf6528bee" LastKnownName="int" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>

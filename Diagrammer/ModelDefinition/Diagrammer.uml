@@ -96,24 +96,6 @@
         isActiveClass="false">
         <ownedAttributesInternal>
           <property
-            Id="7443b6da-98d5-4263-b828-e9e413723ee4"
-            name="KmPrLiter"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="16404864-c8cd-4bff-a375-9a47abe0f4ae"
-                LastKnownName="double"
-                LastKnownLocation="Diagrammer.uml" />
-            </type_NamedElement>
-          </property>
-          <property
             Id="1749e82c-9b3b-42b7-915c-4069b45eff4c"
             name="KøbsÅr"
             isLeaf="false"
@@ -358,6 +340,24 @@
                 LastKnownLocation="Diagrammer.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="3bf3bbb1-c2e5-4b58-b69d-32ad5f475e1f"
+            name="KmPrLiter"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="16404864-c8cd-4bff-a375-9a47abe0f4ae"
+                LastKnownName="double"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -441,6 +441,16 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="6db9a75e-fa22-439e-baf6-06886c6a2e66"
+            isSubstitutable="false">
+            <classMoniker
+              Id="5610ac51-0557-4321-96bb-f818900ae678"
+              LastKnownName="Bil"
+              LastKnownLocation="Diagrammer.uml" />
+          </generalization>
+        </generalsInternal>
         <ownedAttributesInternal>
           <property
             Id="9eb709a3-492f-489d-b7cb-6cc7cddc8304"
@@ -457,6 +467,24 @@
               <undefinedTypeMoniker
                 Id="f7c89428-0010-47a9-bb24-17f8da447ad9"
                 LastKnownName="int"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="481bb12a-a72b-44b9-9fcc-f4d8220fca7e"
+            name="KmPrLiter"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="16404864-c8cd-4bff-a375-9a47abe0f4ae"
+                LastKnownName="double"
                 LastKnownLocation="Diagrammer.uml" />
             </type_NamedElement>
           </property>
@@ -512,6 +540,145 @@
                     <undefinedTypeMoniker
                       Id="16404864-c8cd-4bff-a375-9a47abe0f4ae"
                       LastKnownName="double"
+                      LastKnownLocation="Diagrammer.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="84db3eac-e057-4517-a930-913fa2aa105d"
+        name="ElBil"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="fbdbc05f-89cc-4df4-9caf-7ed86de554b9"
+            isSubstitutable="false">
+            <classMoniker
+              Id="5610ac51-0557-4321-96bb-f818900ae678"
+              LastKnownName="Bil"
+              LastKnownLocation="Diagrammer.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="478e5b2b-8bbb-440b-b701-f7fde6239be2"
+            name="BatteriKapacitet"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="f7c89428-0010-47a9-bb24-17f8da447ad9"
+                LastKnownName="int"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="97bce706-24d1-4861-b61e-51324bc0a299"
+            name="KmPrKw"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="f7c89428-0010-47a9-bb24-17f8da447ad9"
+                LastKnownName="int"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="89b3292e-cde3-4297-b55e-1c1630966680"
+            name="ElBil"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4096fe33-34db-4094-95b6-509c36104d3c"
+            name="HalvårligEjerafgift"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9346dd5e-2bf9-44e2-9d5b-4fc47505153d"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f7c89428-0010-47a9-bb24-17f8da447ad9"
+                      LastKnownName="int"
+                      LastKnownLocation="Diagrammer.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2cb66ede-e2a6-4f45-9cb5-6cae6adf28f8"
+            name="RækkeVidde"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="08123396-a422-483d-bd56-f66df54051b5"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f7c89428-0010-47a9-bb24-17f8da447ad9"
+                      LastKnownName="int"
+                      LastKnownLocation="Diagrammer.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c027ff86-dd84-482d-bab0-917991e76e16"
+            name="RegistreringsAfgift"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2fa02828-c3b5-4964-bb4f-2d5420f63b16"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f7c89428-0010-47a9-bb24-17f8da447ad9"
+                      LastKnownName="int"
                       LastKnownLocation="Diagrammer.uml" />
                   </type_NamedElement>
                 </parameter>

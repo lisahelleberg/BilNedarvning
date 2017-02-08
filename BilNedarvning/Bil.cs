@@ -13,7 +13,6 @@ namespace BilNedarvning
 
         public string Mærke;
         public string RegistreringsNr;
-        public double KmPrLiter;
 
         #region
         /// <summary>
@@ -58,17 +57,19 @@ namespace BilNedarvning
         public abstract int HalvÅrligEjerafgift();
 
         // konstruktor
-        public Bil(string Mærke, int BilPrisExAfgift, int KøbsÅr, double KmPrLiter, string RegistreringsNr)
+        public Bil(string Mærke, int BilPrisExAfgift, int KøbsÅr, string RegistreringsNr)
         {
 
             this.Mærke = Mærke;
             this.BilPrisExAfgift = BilPrisExAfgift;
             this.KøbsÅr = KøbsÅr;
-            this.KmPrLiter = KmPrLiter;
             this.RegistreringsNr = RegistreringsNr;
         }
 
         public abstract double RækkeVidde();
 
+        public abstract string HvilkenBilErJeg();
     }
+
+    
 }

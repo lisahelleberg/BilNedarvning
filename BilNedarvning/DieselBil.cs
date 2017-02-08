@@ -8,12 +8,14 @@ namespace BilNedarvning
 {
     public class DieselBil : Bil
     {
+        public double KmPrLiter;
         public bool Partikelfilter;
         public double Tank;
 
         // Konstruktør med partikelfilter?
-        public DieselBil(string Mærke, int BilPrisExAfgift, int KøbsÅr, double KmPrLiter, string RegistreringsNr, bool Partikelfilter, double Tank) : base(Mærke, BilPrisExAfgift, KøbsÅr, KmPrLiter, RegistreringsNr)
+        public DieselBil(string Mærke, int BilPrisExAfgift, int KøbsÅr, double KmPrLiter, string RegistreringsNr, bool Partikelfilter, double Tank) : base(Mærke, BilPrisExAfgift, KøbsÅr, RegistreringsNr)
         {
+            this.KmPrLiter = KmPrLiter;
             this.Partikelfilter = Partikelfilter;
             this.Tank = Tank;
         }
@@ -57,6 +59,21 @@ namespace BilNedarvning
             }
         }
 
+        public string GetPartikelfilter()
+        {
+            if (Partikelfilter == true)
+            {
+                return "monteret";
+            }
+            else if (Partikelfilter == false)
+            {
+                return "ikke monteret";
+            }
+            else
+            {
+                return null;
+            }
+        }
         public override int HalvÅrligEjerafgift()
         {
             return KmPrLiterAfgift();
@@ -75,6 +92,15 @@ namespace BilNedarvning
         public override double RækkeVidde()
         {
             return Tank * KmPrLiter;
+        }
+
+        public override string HvilkenBilErJeg()
+        {
+            return "Jeg er en dieselbil!";
+        }
+        public override string ToString()
+        {
+            return ($"Bilen er en: {Mærke}. \nDen halvårlige ejerafgift er {GetHalvÅrligEjerafgift()} kr og der er {GetPartikelfilter()} partikelfilter. \nDen blev købt i {KøbsÅr} og kostede {BilPrisExAfgift} kr ex moms. \nRegistreringsnummeret er {RegistreringsNr}. \nDen kører {KmPrLiter} km/l og da tanken er på {Tank} l, \nkan den køre {RækkeVidde()} km på en fuld tankning. Registreringsafgiften er på {RegistreringsAfgift()} kr. \nTotalprisen på bilen er {Totalpris()} kr.\n");
         }
     }
 }
