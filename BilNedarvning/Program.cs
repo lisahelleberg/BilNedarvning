@@ -13,7 +13,7 @@ namespace BilNedarvning
             List<DieselBil> dieselBilListe = new List<DieselBil>();
             List<BenzinBil> benzinBilListe = new List<BenzinBil>();
             List<ElBil> elBilListe = new List<ElBil>();
-            List<Bil> BilListe = new List<Bil>();
+            List<IBil> BilListe = new List<IBil>();
 
             BilListe.Add(new DieselBil("Ford", 150000, 2011, 14, "GH 59 356", true, 65));
             BilListe.Add(new DieselBil("Ferrari", 350000, 2016, 8.5, "HD 89 125", true, 40));
