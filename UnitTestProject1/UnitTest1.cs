@@ -7,6 +7,10 @@ namespace UnitTestProject1
     [TestClass]
     public class UnitTest1
     {
+        #region Registreringsafgift
+        /// <summary>
+        /// Udregning af bilernes registreringsafgift
+        /// </summary>
         [TestMethod]
         // Bil til under 80500,- fra før 2014 
         public void TestMethod1()
@@ -46,6 +50,7 @@ namespace UnitTestProject1
             double BilensRegistreringsafgift = NyDyrBilRegistreringsafgift.RegistreringsAfgift();
             Assert.AreEqual(388725, BilensRegistreringsafgift);
         }
+        #endregion
 
     }
 }
