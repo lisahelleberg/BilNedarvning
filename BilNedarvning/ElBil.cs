@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BilNedarvning
 {
-    class ElBil : Bil
+    class ElBil : Bil , IElMotor
     {
         public int BatteriKapacitet;
         public int KmPrKw;
@@ -30,6 +30,11 @@ namespace BilNedarvning
         public override double RækkeVidde()
         {
             return KmPrKw * BatteriKapacitet;
+        }
+
+        public int LadeTid()
+        {
+            return 5;
         }
 
         public override string HvilkenBilErJeg()

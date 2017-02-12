@@ -40,21 +40,27 @@ namespace BilNedarvning
             {
                 if (bilitem is DieselBil)
                 {
-                    DieselBil dieselbil1 = bilitem as DieselBil;
+                    var dieselbil1 = bilitem as DieselBil;
                     Console.WriteLine(dieselbil1.HvilkenBilErJeg());
                     Console.WriteLine(dieselbil1);
                 }
                 else if (bilitem is BenzinBil)
                 {
-                    BenzinBil benzinbil1 = bilitem as BenzinBil;
+                    var benzinbil1 = bilitem as BenzinBil;
                     Console.WriteLine(benzinbil1.HvilkenBilErJeg());
                     Console.WriteLine(benzinbil1);
                 }
                 else if (bilitem is ElBil)
                 {
-                    ElBil elbil1 = bilitem as ElBil;
+                    var elbil1 = bilitem as ElBil;
                     Console.WriteLine(elbil1.HvilkenBilErJeg());
                     Console.WriteLine(elbil1);
+                }
+                else if (bilitem is IElMotor)
+                {
+                    var elmotor1 = bilitem as IElMotor;
+                    Console.Write("Bilen har elmotor!");
+                    Console.WriteLine("Ladetiden er: " + elmotor1.LadeTid());
                 }
             }
              

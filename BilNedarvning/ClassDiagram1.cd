@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BilNedarvning.Bil">
+    <Position X="6.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAACAAAAgCAAACAAQAAAEAAAIAAAAIAA=</HashCode>
+      <FileName>Bil.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BilNedarvning.BenzinBil">
+    <Position X="4.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEACAgCAAAAAAAAAAEAEAAAAAAAAA=</HashCode>
+      <FileName>BenzinBil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BilNedarvning.DieselBil">
+    <Position X="6.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAEICAgCAAAAggAAAAEAEABIAAAAAA=</HashCode>
+      <FileName>DieselBil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BilNedarvning.ElBil">
+    <Position X="9" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAEAAAgCAAIAAAAQAAEAAAAAQAAAAA=</HashCode>
+      <FileName>ElBil.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
