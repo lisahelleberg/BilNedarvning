@@ -17,5 +17,16 @@ namespace UnitTestProject1
             Assert.AreEqual(78750, BilensRegistreringsAfgift);
         }
 
+        [TestMethod]
+        // Bil til over 80500,- fra før 2014 
+        public void TestMethod2()
+        {
+            Bil NyDyrBilRegistreringsafgift = new DieselBil("Ford", 250000, 2013, 18.9, "PG 97 357", true, 65);
+
+            double BilensRegistreringsAfgift = NyDyrBilRegistreringsafgift.RegistreringsAfgift();
+            Assert.AreEqual(389625, BilensRegistreringsAfgift);
+        }
+
+
     }
 }
