@@ -77,6 +77,14 @@ namespace UnitTestProject1
         }
         #endregion
 
+        [TestMethod]
+        // Bil med partikelfilter monteret
+        public void TestMesthod7()
+        {
+            DieselBil Bil1 = new DieselBil("Toyota", 200000, 2015, 10.1, "ID 46 921", true, 65);
 
+            string Bil11 = Bil1.GetPartikelfilter();
+            Assert.IsTrue(true, "monteret");
+        }
     }
 }
