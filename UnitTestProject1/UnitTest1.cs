@@ -61,7 +61,14 @@ namespace UnitTestProject1
             Assert.AreEqual(153750, BilligBilensTotalePris);
         }
 
-       
+        [TestMethod]
+        public void TestMethod6()
+        {
+            Bil NyDyrBilTotalPris = new DieselBil("Ford", 250000, 2016, 18.9, "PG 97 357", true, 65);
+
+            double DyrBilensTotalePris = NyDyrBilTotalPris.Totalpris();
+            Assert.AreEqual(638725, DyrBilensTotalePris);
+        }
 
     }
 }
