@@ -52,7 +52,12 @@ namespace UnitTestProject1
         }
         #endregion
 
+        #region Totalpris
+        /// <summary>
+        /// Udregning af bilernes totale pris
+        /// </summary>
         [TestMethod]
+        // Billig bils totale pris
         public void TestMethod5()
         {
             Bil NyBilligBilTotalPris = new DieselBil("Ford", 75000, 2013, 18.9, "PG 97 357", true, 65);
@@ -62,6 +67,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
+        // Dyr bils totale pris
         public void TestMethod6()
         {
             Bil NyDyrBilTotalPris = new DieselBil("Ford", 250000, 2016, 18.9, "PG 97 357", true, 65);
@@ -69,6 +75,8 @@ namespace UnitTestProject1
             double DyrBilensTotalePris = NyDyrBilTotalPris.Totalpris();
             Assert.AreEqual(638725, DyrBilensTotalePris);
         }
+        #endregion
+
 
     }
 }

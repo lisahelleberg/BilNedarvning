@@ -74,6 +74,7 @@ namespace BilNedarvning
                 return null;
             }
         }
+        // Halvårlig ejerafgift er afhængig af KmPrLiter
         public override int HalvÅrligEjerafgift()
         {
             return KmPrLiterAfgift();
