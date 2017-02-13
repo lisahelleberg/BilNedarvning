@@ -152,5 +152,14 @@ namespace UnitTestProject1
             Assert.AreEqual(350, Bil15);
         }
 
+        [TestMethod]
+        // Dieselbil uden partikelfilter mellem 15 og 25 km/l
+        public void TestMethod14()
+        {
+            DieselBil Bil6 = new DieselBil("Toyota", 200000, 2015, 20, "OS 79 375", false, 65);
+
+            int Bil16 = Bil6.GetHalvÅrligEjerafgift();
+            Assert.AreEqual(1500, Bil16);
+        }
     }
 }
