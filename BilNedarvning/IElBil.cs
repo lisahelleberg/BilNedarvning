@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BilNedarvning
 {
-    public interface IElMotor
+    public interface IElBil
     {
         int LadeTid();
     }

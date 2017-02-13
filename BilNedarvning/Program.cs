@@ -56,9 +56,9 @@ namespace BilNedarvning
                     Console.WriteLine(elbil1.HvilkenBilErJeg());
                     Console.WriteLine(elbil1);
                 }
-                else if (bilitem is IElMotor)
+                else if (bilitem is IElBil)
                 {
-                    var elmotor1 = bilitem as IElMotor;
+                    var elmotor1 = bilitem as IElBil;
                     Console.Write("Bilen har elmotor!");
                     Console.WriteLine("Ladetiden er: " + elmotor1.LadeTid());
                 }

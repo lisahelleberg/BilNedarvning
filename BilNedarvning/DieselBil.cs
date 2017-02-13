@@ -63,11 +63,11 @@ namespace BilNedarvning
         {
             if (Partikelfilter == true)
             {
-                return "monteret";
+                return "Monteret";
             }
             else if (Partikelfilter == false)
             {
-                return "ikke monteret";
+                return "Ikke monteret";
             }
             else
             {
@@ -101,7 +101,7 @@ namespace BilNedarvning
         }
         public override string ToString()
         {
-            return ($"Bilen er en: {Mærke}. \nDen halvårlige ejerafgift er {GetHalvÅrligEjerafgift()} kr og der er {GetPartikelfilter()} partikelfilter. \nDen blev købt i {KøbsÅr} og kostede {BilPrisExAfgift} kr ex moms. \nRegistreringsnummeret er {RegistreringsNr}. \nDen kører {KmPrLiter} km/l og da tanken er på {Tank} l, \nkan den køre {RækkeVidde()} km på en fuld tankning. Registreringsafgiften er på {RegistreringsAfgift()} kr. \nTotalprisen på bilen er {Totalpris()} kr.\n");
+            return ($"Mærke: {Mærke}. \nHalvårlig ejerafgift: {GetHalvÅrligEjerafgift()} kr. \nPartikelfilter: {GetPartikelfilter()}. \nKøbsår: {KøbsÅr}. \nPris: {BilPrisExAfgift} kr ex afgift. \nRegistreringsnummer: {RegistreringsNr}. \nKm pr liter: {KmPrLiter}. \nTank: {Tank} l. \nRækkevidde {RækkeVidde()} km på en fuld tankning. \nRegistreringsafgift: {RegistreringsAfgift()} kr. \nTotalprisen på bilen er {Totalpris()} kr.\n");
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BilNedarvning
 {
-    class ElBil : Bil , IElMotor
+    public class ElBil : Bil , IElBil
     {
         public int BatteriKapacitet;
         public int KmPrKw;

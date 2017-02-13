@@ -50,6 +50,13 @@ namespace UnitTestProject1
             double BilensRegistreringsafgift = NyDyrBilRegistreringsafgift.RegistreringsAfgift();
             Assert.AreEqual(388725, BilensRegistreringsafgift);
         }
+        
+        [TestMethod]
+        // Elbil
+        public void TestMethod5()
+        {
+           
+        }
         #endregion
 
         #region Totalpris
@@ -58,7 +65,7 @@ namespace UnitTestProject1
         /// </summary>
         [TestMethod]
         // Billig bils totale pris
-        public void TestMethod5()
+        public void TestMethod6()
         {
             Bil NyBilligBilTotalPris = new DieselBil("Ford", 75000, 2013, 18.9, "PG 97 357", true, 65);
 
@@ -68,7 +75,7 @@ namespace UnitTestProject1
 
         [TestMethod]
         // Dyr bils totale pris
-        public void TestMethod6()
+        public void TestMethod7()
         {
             Bil NyDyrBilTotalPris = new DieselBil("Ford", 250000, 2016, 18.9, "PG 97 357", true, 65);
 
@@ -77,9 +84,13 @@ namespace UnitTestProject1
         }
         #endregion
 
+        #region Metode med partikelfilter
+        /// <summary>
+        /// 
+        /// </summary>
         [TestMethod]
         // Bil med partikelfilter monteret
-        public void TestMesthod7()
+        public void TestMesthod8()
         {
             DieselBil Bil1 = new DieselBil("Toyota", 200000, 2015, 10.1, "ID 46 921", true, 65);
 
@@ -89,12 +100,13 @@ namespace UnitTestProject1
 
         [TestMethod]
         // Bil uden partikelfilter monteret
-        public void TestMethod8()
+        public void TestMethod9()
         {
             DieselBil Bil2 = new DieselBil("Toyota", 200000, 2015, 10.1, "ID 46 921", false, 65);
 
             string Bil12 = Bil2.GetPartikelfilter();
             Assert.IsFalse(false, "ikke monteret");
         }
+        #endregion
     }
 }

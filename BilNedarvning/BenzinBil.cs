@@ -47,7 +47,7 @@ namespace BilNedarvning
 
         public override string ToString()
         {
-            return ($"Bilen er en: {Mærke}. \nDen halvårlige ejerafgift er {HalvÅrligEjerafgift()} kr. \nDen blev købt i {KøbsÅr} og kostede {BilPrisExAfgift} kr ex moms. \nRegistreringsnummeret er {RegistreringsNr}. \nDen kører {KmPrLiter} km/l og da tanken er på {Tank} l, \nkan den køre {RækkeVidde()} km på en fuld tankning. \nRegistreringsafgiften er på {RegistreringsAfgift()} kr. \nTotalprisen på bilen er {Totalpris()} kr.\n");
+            return ($"Mærke: {Mærke}. \nHalvårlige ejerafgift: {HalvÅrligEjerafgift()} kr. \nKøbsår: {KøbsÅr}. \nPris {BilPrisExAfgift} kr ex afgift. \nRegistreringsnummer: {RegistreringsNr}. \nKm pr liter: {KmPrLiter}. \nTank: {Tank} l. \nRækkevidde: {RækkeVidde()} km på en fuld tankning. \nRegistreringsafgift: {RegistreringsAfgift()} kr. \nTotalprisen på bilen er {Totalpris()} kr.\n");
         }
     }
 }
