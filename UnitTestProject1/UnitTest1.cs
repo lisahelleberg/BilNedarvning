@@ -131,5 +131,19 @@ namespace UnitTestProject1
             int Bil13 = Bil3.GetHalvÅrligEjerafgift();
             Assert.AreEqual(2000, Bil13); 
         }
+
+        [TestMethod]
+        // Dieselbil med partikelfilter mellem 15 og 25 km/l
+        public void TestMethod12()
+        {
+            DieselBil Bil4 = new DieselBil("Toyota", 200000, 2015, 20, "OS 79 375", true, 65);
+
+            int Bil14 = Bil4.GetHalvÅrligEjerafgift();
+            Assert.AreEqual(1000, Bil14);
+        }
+
+       
+        }
+
     }
 }
