@@ -142,7 +142,14 @@ namespace UnitTestProject1
             Assert.AreEqual(1000, Bil14);
         }
 
-       
+        [TestMethod]
+        // Bieselbil med partikelfilter over 25 km/l
+        public void TestMethod13()
+        {
+            DieselBil Bil5 = new DieselBil("Toyota", 200000, 2015, 30, "OS 79 375", true, 65);
+
+            int Bil15 = Bil5.GetHalvÅrligEjerafgift();
+            Assert.AreEqual(350, Bil15);
         }
 
     }
