@@ -121,5 +121,15 @@ namespace UnitTestProject1
             Assert.IsFalse(false, "ikke monteret");
         }
         #endregion
+
+        [TestMethod]
+        // Dieselbil med partikelfilter under 15 km/l
+        public void TestMethod11()
+        {
+            DieselBil Bil3 = new DieselBil("Toyota", 200000, 2015, 10.1, "OS 79 375", true, 65);
+
+            int Bil13 = Bil3.GetHalvÅrligEjerafgift();
+            Assert.AreEqual(2000, Bil13); 
+        }
     }
 }
