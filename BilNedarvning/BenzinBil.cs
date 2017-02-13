@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BilNedarvning
 {
-    sealed class BenzinBil : Bil
+    public sealed class BenzinBil : Bil
     {
         public int Tank;
         public double KmPrLiter;
