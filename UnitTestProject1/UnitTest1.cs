@@ -55,7 +55,10 @@ namespace UnitTestProject1
         // Elbil
         public void TestMethod5()
         {
-           
+            Bil NyElbilRegistreringsafgift = new ElBil("Tesla", 300000, 2016, "KS 35 975", 400, 7);
+
+            double BilensRegistreringsafgift = NyElbilRegistreringsafgift.RegistreringsAfgift();
+            Assert.AreEqual(60000, BilensRegistreringsafgift);
         }
         #endregion
 
@@ -82,6 +85,16 @@ namespace UnitTestProject1
             double DyrBilensTotalePris = NyDyrBilTotalPris.Totalpris();
             Assert.AreEqual(638725, DyrBilensTotalePris);
         }
+
+        [TestMethod]
+        // Elbils totale pris
+        public void TestMethod8()
+        {
+            Bil ElBilTotalPris = new ElBil("Tesla", 300000, 2016, "KS 35 975", 400, 7);
+
+            double ElBilensTotalePris = ElBilTotalPris.Totalpris();
+            Assert.AreEqual(360000, ElBilensTotalePris);
+        }
         #endregion
 
         #region Metode med partikelfilter
@@ -90,7 +103,7 @@ namespace UnitTestProject1
         /// </summary>
         [TestMethod]
         // Bil med partikelfilter monteret
-        public void TestMesthod8()
+        public void TestMesthod9()
         {
             DieselBil Bil1 = new DieselBil("Toyota", 200000, 2015, 10.1, "ID 46 921", true, 65);
 
@@ -100,7 +113,7 @@ namespace UnitTestProject1
 
         [TestMethod]
         // Bil uden partikelfilter monteret
-        public void TestMethod9()
+        public void TestMethod10()
         {
             DieselBil Bil2 = new DieselBil("Toyota", 200000, 2015, 10.1, "ID 46 921", false, 65);
 
