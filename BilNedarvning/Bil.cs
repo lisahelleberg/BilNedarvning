@@ -14,7 +14,7 @@ namespace BilNedarvning
         public string Mærke;
         public string RegistreringsNr;
 
-        #region
+        #region Registreringsafgift
         /// <summary>
         /// Udregning af Registreringsafgiften efter bilens pris ex afgift samt købsår
         /// </summary>

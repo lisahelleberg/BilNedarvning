@@ -13,7 +13,7 @@ namespace UnitTestProject1
         /// </summary>
         [TestMethod]
         // Bil til under 80500,- fra før 2014 
-        public void TestMethod1()
+        public void BilligBil2014()
         {
             Bil NyBilligBilRegistreringsafgift = new DieselBil("Ford", 75000, 2013, 18.9, "PG 97 357", true, 65);
 
@@ -23,7 +23,7 @@ namespace UnitTestProject1
 
         [TestMethod]
         // Bil til over 80500,- fra før 2014 
-        public void TestMethod2()
+        public void DyrBil2014()
         {
             Bil NyDyrBilRegistreringsafgift = new DieselBil("Ford", 250000, 2013, 18.9, "PG 97 357", true, 65);
 
@@ -60,6 +60,37 @@ namespace UnitTestProject1
             double BilensRegistreringsafgift = NyElbilRegistreringsafgift.RegistreringsAfgift();
             Assert.AreEqual(60000, BilensRegistreringsafgift);
         }
+        #region Grænsetilfælde
+        [TestMethod]
+        // Bil til 80499 før 2014
+        public void TestMethod17()
+        {
+            Bil NyBil1 = new DieselBil("Ford", 80499, 2013, 18.9, "PG 97 357", true, 65);
+
+            double NyBil11 = NyBil1.RegistreringsAfgift();
+            Assert.AreEqual(84523.95, NyBil11);
+        }
+
+        [TestMethod]
+        // Bil til 80501 før 2014
+        public void TestMethod18()
+        {
+            Bil NyBil2 = new DieselBil("Ford", 80501, 2013, 18.9, "PG 97 357", true, 65);
+
+            double NyBil21 = NyBil2.RegistreringsAfgift();
+            Assert.AreEqual(84526.8, NyBil21);
+        }
+
+        [TestMethod]
+        // Bil til 81699 efter 2015
+        public void BilEfter2014LavGrænse()
+        {
+            Bil NyBil3 = new DieselBil("Ford", 81699, 2016, 18.9, "PG 97 357", true, 65);
+
+            double NyBil31 = NyBil3.RegistreringsAfgift();
+            Assert.AreEqual(85783.95, NyBil31);
+        }
+        #endregion
         #endregion
 
         #region Totalpris
