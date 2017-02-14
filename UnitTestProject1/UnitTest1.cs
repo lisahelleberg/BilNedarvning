@@ -233,6 +233,18 @@ namespace UnitTestProject1
             int Bil18 = Bil8.HalvÅrligEjerafgift();
             Assert.AreEqual(600, Bil18);
         }
+
+        [TestMethod]
+        // Benzinbil over 28 km/l
+        public void BenzinBilLangAfstandEjerAfgift()
+        {
+            Bil Bil9 = new BenzinBil("Ford", 200000, 2015, 35, "PS 79 246", 60);
+
+            int Bil19 = Bil9.HalvÅrligEjerafgift();
+            Assert.AreEqual(320, Bil19);
+        }
+
+        
         #endregion
         #endregion
     }
