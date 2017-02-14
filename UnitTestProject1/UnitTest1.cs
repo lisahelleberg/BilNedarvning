@@ -277,12 +277,35 @@ namespace UnitTestProject1
 
         #region Rækkevidde
         [TestMethod]
-        public void DieselBilRækkeViddeKort()
+        // Rækkevidden for benzin- og dieselbil
+        public void DieselBilRækkeVidde()
         {
             var Bil20 = new DieselBil("Toyota", 200000, 2015, 10.1, "OS 79 375", true, 65);
 
             double Bil21 = Bil20.RækkeVidde();
             Assert.AreEqual(656.5, Bil21);
+        }
+
+        [TestMethod]
+        // Rækkevidden for elbil
+        public void ElBilRækkeVidde()
+        {
+            var Bil30 = new ElBil("Tesla", 300000, 2016, "KS 35 975", 400, 7);
+
+            double Bil31 = Bil30.RækkeVidde();
+            Assert.AreEqual(2800, Bil31); 
+        }
+        #endregion
+
+        #region Ladetid
+        [TestMethod]
+        // Ladetid for elbil
+        public void ElbilRækkevidde()
+        {
+            var elbil1 = new ElBil("Tesla", 300000, 2016, "KS 35 975", 400, 7);
+
+            int elbil11 = elbil1.LadeTid();
+            Assert.AreEqual(5, elbil11);
         }
         #endregion
     }
