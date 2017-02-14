@@ -13,7 +13,7 @@ namespace UnitTestProject1
         /// </summary>
         [TestMethod]
         // Bil til under 80500,- fra før 2014 
-        public void BilligBil2014()
+        public void BilligBilFør2014RegAfgift()
         {
             Bil NyBilligBilRegistreringsafgift = new DieselBil("Ford", 75000, 2013, 18.9, "PG 97 357", true, 65);
 
@@ -23,7 +23,7 @@ namespace UnitTestProject1
 
         [TestMethod]
         // Bil til over 80500,- fra før 2014 
-        public void DyrBil2014()
+        public void DyrBilFør2014RegAfgift()
         {
             Bil NyDyrBilRegistreringsafgift = new DieselBil("Ford", 250000, 2013, 18.9, "PG 97 357", true, 65);
 
@@ -33,7 +33,7 @@ namespace UnitTestProject1
 
         [TestMethod]
         // Bil til under 81700,- fra efter 2015
-        public void TestMethod3()
+        public void BilligBilEFter2015RegAfgift()
         {
             Bil NyBilligBilRegistreringsafgift = new DieselBil("Ford", 75000, 2016, 18.9, "PG 97 357", true, 65);
 
@@ -43,7 +43,7 @@ namespace UnitTestProject1
 
         [TestMethod]
         // Bil Til over 81700,- fra efter 2015
-        public void TestMethod4()
+        public void DyrBilEfter2015RegAfgift()
         {
             Bil NyDyrBilRegistreringsafgift = new DieselBil("Ford", 250000, 2016, 18.9, "PG 97 357", true, 65);
 
@@ -53,7 +53,7 @@ namespace UnitTestProject1
         
         [TestMethod]
         // Elbil
-        public void TestMethod5()
+        public void ElBilRegAfgift()
         {
             Bil NyElbilRegistreringsafgift = new ElBil("Tesla", 300000, 2016, "KS 35 975", 400, 7);
 
@@ -63,7 +63,7 @@ namespace UnitTestProject1
         #region Grænsetilfælde
         [TestMethod]
         // Bil til 80499 før 2014
-        public void TestMethod17()
+        public void BilFør2014LavGrænseRegAfgift()
         {
             Bil NyBil1 = new DieselBil("Ford", 80499, 2013, 18.9, "PG 97 357", true, 65);
 
@@ -73,7 +73,7 @@ namespace UnitTestProject1
 
         [TestMethod]
         // Bil til 80501 før 2014
-        public void TestMethod18()
+        public void BilFør2014HøjGrænseRegAfgift()
         {
             Bil NyBil2 = new DieselBil("Ford", 80501, 2013, 18.9, "PG 97 357", true, 65);
 
@@ -83,12 +83,22 @@ namespace UnitTestProject1
 
         [TestMethod]
         // Bil til 81699 efter 2015
-        public void BilEfter2014LavGrænse()
+        public void BilEfter2014LavGrænseRegAfgift()
         {
             Bil NyBil3 = new DieselBil("Ford", 81699, 2016, 18.9, "PG 97 357", true, 65);
 
             double NyBil31 = NyBil3.RegistreringsAfgift();
             Assert.AreEqual(85783.95, NyBil31);
+        }
+
+        [TestMethod]
+        // Bil til 81701 efter 2015
+        public void BilEfter2014HøjGrænseRegAfgift()
+        {
+            Bil NyBil4 = new DieselBil("Ford", 81701, 2016, 18.9, "PG 97 357", true, 65);
+
+            double NyBil41 = NyBil4.RegistreringsAfgift();
+            Assert.AreEqual(85786.8, NyBil41);
         }
         #endregion
         #endregion
@@ -99,7 +109,7 @@ namespace UnitTestProject1
         /// </summary>
         [TestMethod]
         // Billig bils totale pris
-        public void TestMethod6()
+        public void BilligBilTotalPris()
         {
             Bil NyBilligBilTotalPris = new DieselBil("Ford", 75000, 2013, 18.9, "PG 97 357", true, 65);
 
@@ -109,7 +119,7 @@ namespace UnitTestProject1
 
         [TestMethod]
         // Dyr bils totale pris
-        public void TestMethod7()
+        public void DyrBilTotalPris()
         {
             Bil NyDyrBilTotalPris = new DieselBil("Ford", 250000, 2016, 18.9, "PG 97 357", true, 65);
 
@@ -119,7 +129,7 @@ namespace UnitTestProject1
 
         [TestMethod]
         // Elbils totale pris
-        public void TestMethod8()
+        public void ElBilTotalPris()
         {
             Bil ElBilTotalPris = new ElBil("Tesla", 300000, 2016, "KS 35 975", 400, 7);
 
@@ -134,7 +144,7 @@ namespace UnitTestProject1
         /// </summary>
         [TestMethod]
         // Bil med partikelfilter monteret
-        public void TestMesthod9()
+        public void BilMedPartikelFilterMonteret()
         {
             DieselBil Bil1 = new DieselBil("Toyota", 200000, 2015, 10.1, "ID 46 921", true, 65);
 
@@ -144,7 +154,7 @@ namespace UnitTestProject1
 
         [TestMethod]
         // Bil uden partikelfilter monteret
-        public void TestMethod10()
+        public void BilUdenPartikelFilterMonteret()
         {
             DieselBil Bil2 = new DieselBil("Toyota", 200000, 2015, 10.1, "ID 46 921", false, 65);
 
@@ -153,9 +163,15 @@ namespace UnitTestProject1
         }
         #endregion
 
+        #region HalvårligEjerafgift
+        /// <summary>
+        /// Metode til test af halvårlig ejerafgift af både elbiler, benzinbiler og dieselbiler med og uden partikelfilter
+        /// </summary>
+        #region Dieselbil med partikelfilter
+        
         [TestMethod]
         // Dieselbil med partikelfilter under 15 km/l
-        public void TestMethod11()
+        public void DieselBilMedPartikelFilterKortAfstandEjerAfgift()
         {
             DieselBil Bil3 = new DieselBil("Toyota", 200000, 2015, 10.1, "OS 79 375", true, 65);
 
@@ -165,7 +181,7 @@ namespace UnitTestProject1
 
         [TestMethod]
         // Dieselbil med partikelfilter mellem 15 og 25 km/l
-        public void TestMethod12()
+        public void DieselBilMedPartikelFilterMellemAfstandEjerAfgift()
         {
             DieselBil Bil4 = new DieselBil("Toyota", 200000, 2015, 20, "OS 79 375", true, 65);
 
@@ -175,27 +191,32 @@ namespace UnitTestProject1
 
         [TestMethod]
         // Bieselbil med partikelfilter over 25 km/l
-        public void TestMethod13()
+        public void DieselBilMedPartikelFilterLangAfstandEjerAfgift()
         {
             DieselBil Bil5 = new DieselBil("Toyota", 200000, 2015, 30, "OS 79 375", true, 65);
 
             int Bil15 = Bil5.GetHalvÅrligEjerafgift();
             Assert.AreEqual(350, Bil15);
         }
+        #endregion
 
+        #region Dieselbil uden partikelfilter
         [TestMethod]
         // Dieselbil uden partikelfilter mellem 15 og 25 km/l
-        public void TestMethod14()
+        public void DieselBilUdenPartikelFilterMellemAfstandEjerAgfift()
         {
             DieselBil Bil6 = new DieselBil("Toyota", 200000, 2015, 20, "OS 79 375", false, 65);
 
             int Bil16 = Bil6.GetHalvÅrligEjerafgift();
             Assert.AreEqual(1500, Bil16);
         }
+        #endregion
+
+        #region Benzinbiler
 
         [TestMethod]
         // Benzinbil under 20 km/l
-        public void TestMethod15()
+        public void BenzinBilKortAfstangEjerAfgift()
         {
             Bil Bil7 = new BenzinBil("Ford", 200000, 2015, 15, "PS 79 246", 60);
 
@@ -205,12 +226,14 @@ namespace UnitTestProject1
 
         [TestMethod]
         // Benzinbil mellem 20 og 28 km/l
-        public void TestMethod16()
+        public void BenzinBilMellemAfstandEjerAfgift()
         {
             Bil Bil8 = new BenzinBil("Ford", 200000, 2015, 25, "PS 79 246", 60);
 
             int Bil18 = Bil8.HalvÅrligEjerafgift();
             Assert.AreEqual(600, Bil18);
         }
+        #endregion
+        #endregion
     }
 }
