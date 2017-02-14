@@ -275,5 +275,15 @@ namespace UnitTestProject1
         #endregion
         #endregion
 
+        #region Rækkevidde
+        [TestMethod]
+        public void DieselBilRækkeViddeKort()
+        {
+            var Bil20 = new DieselBil("Toyota", 200000, 2015, 10.1, "OS 79 375", true, 65);
+
+            double Bil21 = Bil20.RækkeVidde();
+            Assert.AreEqual(656.5, Bil21);
+        }
+        #endregion
     }
 }
