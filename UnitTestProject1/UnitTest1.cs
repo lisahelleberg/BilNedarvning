@@ -70,7 +70,15 @@ namespace UnitTestProject1
             double NyBil11 = NyBil1.RegistreringsAfgift();
             Assert.AreEqual(84523.95, NyBil11);
         }
+        [TestMethod]
+        // Bil til 80500 før 2014
+        public void BilFør2014PåGrænsenRegAfgift()
+        {
+            Bil NyBil11 = new DieselBil("Ford", 80500, 2013, 18.9, "PG 97 357", true, 65);
 
+            double NyBil111 = NyBil11.RegistreringsAfgift();
+            Assert.AreEqual(84525, NyBil111);
+        }
         [TestMethod]
         // Bil til 80501 før 2014
         public void BilFør2014HøjGrænseRegAfgift()
@@ -91,6 +99,15 @@ namespace UnitTestProject1
             Assert.AreEqual(85783.95, NyBil31);
         }
 
+        [TestMethod]
+        // Bil til 81700 efter 2015
+        public void BilEfter2014PåGrænsenRegAfgift()
+        {
+            Bil NyBil12 = new DieselBil("Ford", 81700, 2016, 18.9, "PG 97 357", true, 65);
+
+            double NyBil112 = NyBil12.RegistreringsAfgift();
+            Assert.AreEqual(85785, NyBil112);
+        }
         [TestMethod]
         // Bil til 81701 efter 2015
         public void BilEfter2014HøjGrænseRegAfgift()
@@ -243,9 +260,20 @@ namespace UnitTestProject1
             int Bil19 = Bil9.HalvÅrligEjerafgift();
             Assert.AreEqual(320, Bil19);
         }
+        #endregion
 
-        
+        #region Elbiler
+        [TestMethod]
+        // Elbil
+        public void ElBilEjerAfgift()
+        {
+            Bil Bil10 = new ElBil("Tesla", 300000, 2016, "KS 35 975", 400, 7);
+
+            int Bil110 = Bil10.HalvÅrligEjerafgift();
+            Assert.AreEqual(0, Bil110);
+        }
         #endregion
         #endregion
+
     }
 }
