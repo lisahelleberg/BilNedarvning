@@ -7,116 +7,116 @@ namespace UnitTestProject1
     [TestClass]
     public class UnitTest1
     {
-        #region Registreringsafgift
-        /// <summary>
-        /// Udregning af bilernes registreringsafgift
-        /// </summary>
-        [TestMethod]
-        // Bil til under 80500,- fra før 2014 
-        public void BilligBilFør2014RegAfgift()
-        {
-            Bil NyBilligBilRegistreringsafgift = new DieselBil("Ford", 75000, 2013, 18.9, "PG 97 357", true, 65);
+        //#region Registreringsafgift
+        ///// <summary>
+        ///// Udregning af bilernes registreringsafgift
+        ///// </summary>
+        //[TestMethod]
+        //// Bil til under 80500,- fra før 2014 
+        //public void BilligBilFør2014RegAfgift()
+        //{
+        //    Bil NyBilligBilRegistreringsafgift = new DieselBil("Ford", 75000, 2013, 18.9, "PG 97 357", true, 65);
 
-            double BilensRegistreringsAfgift = NyBilligBilRegistreringsafgift.RegistreringsAfgift();
-            Assert.AreEqual(78750, BilensRegistreringsAfgift);
-        }
+        //    double BilensRegistreringsAfgift = NyBilligBilRegistreringsafgift.RegistreringsAfgift();
+        //    Assert.AreEqual(78750, BilensRegistreringsAfgift);
+        //}
 
-        [TestMethod]
-        // Bil til over 80500,- fra før 2014 
-        public void DyrBilFør2014RegAfgift()
-        {
-            Bil NyDyrBilRegistreringsafgift = new DieselBil("Ford", 250000, 2013, 18.9, "PG 97 357", true, 65);
+        //[TestMethod]
+        //// Bil til over 80500,- fra før 2014 
+        //public void DyrBilFør2014RegAfgift()
+        //{
+        //    Bil NyDyrBilRegistreringsafgift = new DieselBil("Ford", 250000, 2013, 18.9, "PG 97 357", true, 65);
 
-            double BilensRegistreringsAfgift = NyDyrBilRegistreringsafgift.RegistreringsAfgift();
-            Assert.AreEqual(389625, BilensRegistreringsAfgift);
-        }
+        //    double BilensRegistreringsAfgift = NyDyrBilRegistreringsafgift.RegistreringsAfgift();
+        //    Assert.AreEqual(389625, BilensRegistreringsAfgift);
+        //}
 
-        [TestMethod]
-        // Bil til under 81700,- fra efter 2015
-        public void BilligBilEFter2015RegAfgift()
-        {
-            Bil NyBilligBilRegistreringsafgift = new DieselBil("Ford", 75000, 2016, 18.9, "PG 97 357", true, 65);
+        //[TestMethod]
+        //// Bil til under 81700,- fra efter 2015
+        //public void BilligBilEFter2015RegAfgift()
+        //{
+        //    Bil NyBilligBilRegistreringsafgift = new DieselBil("Ford", 75000, 2016, 18.9, "PG 97 357", true, 65);
 
-            double BilensRegistreringsafgift = NyBilligBilRegistreringsafgift.RegistreringsAfgift();
-            Assert.AreEqual(78750, BilensRegistreringsafgift);
-        }
+        //    double BilensRegistreringsafgift = NyBilligBilRegistreringsafgift.RegistreringsAfgift();
+        //    Assert.AreEqual(78750, BilensRegistreringsafgift);
+        //}
 
-        [TestMethod]
-        // Bil Til over 81700,- fra efter 2015
-        public void DyrBilEfter2015RegAfgift()
-        {
-            Bil NyDyrBilRegistreringsafgift = new DieselBil("Ford", 250000, 2016, 18.9, "PG 97 357", true, 65);
+        //[TestMethod]
+        //// Bil Til over 81700,- fra efter 2015
+        //public void DyrBilEfter2015RegAfgift()
+        //{
+        //    Bil NyDyrBilRegistreringsafgift = new DieselBil("Ford", 250000, 2016, 18.9, "PG 97 357", true, 65);
 
-            double BilensRegistreringsafgift = NyDyrBilRegistreringsafgift.RegistreringsAfgift();
-            Assert.AreEqual(388725, BilensRegistreringsafgift);
-        }
+        //    double BilensRegistreringsafgift = NyDyrBilRegistreringsafgift.RegistreringsAfgift();
+        //    Assert.AreEqual(388725, BilensRegistreringsafgift);
+        //}
         
-        [TestMethod]
-        // Elbil
-        public void ElBilRegAfgift()
-        {
-            Bil NyElbilRegistreringsafgift = new ElBil("Tesla", 300000, 2016, "KS 35 975", 400, 7);
+        //[TestMethod]
+        //// Elbil
+        //public void ElBilRegAfgift()
+        //{
+        //    Bil NyElbilRegistreringsafgift = new ElBil("Tesla", 300000, 2016, "KS 35 975", 400, 7);
 
-            double BilensRegistreringsafgift = NyElbilRegistreringsafgift.RegistreringsAfgift();
-            Assert.AreEqual(60000, BilensRegistreringsafgift);
-        }
-        #region Grænsetilfælde
-        [TestMethod]
-        // Bil til 80499 før 2014
-        public void BilFør2014LavGrænseRegAfgift()
-        {
-            Bil NyBil1 = new DieselBil("Ford", 80499, 2013, 18.9, "PG 97 357", true, 65);
+        //    double BilensRegistreringsafgift = NyElbilRegistreringsafgift.RegistreringsAfgift();
+        //    Assert.AreEqual(60000, BilensRegistreringsafgift);
+        //}
+        //#region Grænsetilfælde
+        //[TestMethod]
+        //// Bil til 80499 før 2014
+        //public void BilFør2014LavGrænseRegAfgift()
+        //{
+        //    Bil NyBil1 = new DieselBil("Ford", 80499, 2013, 18.9, "PG 97 357", true, 65);
 
-            double NyBil11 = NyBil1.RegistreringsAfgift();
-            Assert.AreEqual(84523.95, NyBil11);
-        }
-        [TestMethod]
-        // Bil til 80500 før 2014
-        public void BilFør2014PåGrænsenRegAfgift()
-        {
-            Bil NyBil11 = new DieselBil("Ford", 80500, 2013, 18.9, "PG 97 357", true, 65);
+        //    double NyBil11 = NyBil1.RegistreringsAfgift();
+        //    Assert.AreEqual(84523.95, NyBil11);
+        //}
+        //[TestMethod]
+        //// Bil til 80500 før 2014
+        //public void BilFør2014PåGrænsenRegAfgift()
+        //{
+        //    Bil NyBil11 = new DieselBil("Ford", 80500, 2013, 18.9, "PG 97 357", true, 65);
 
-            double NyBil111 = NyBil11.RegistreringsAfgift();
-            Assert.AreEqual(84525, NyBil111);
-        }
-        [TestMethod]
-        // Bil til 80501 før 2014
-        public void BilFør2014HøjGrænseRegAfgift()
-        {
-            Bil NyBil2 = new DieselBil("Ford", 80501, 2013, 18.9, "PG 97 357", true, 65);
+        //    double NyBil111 = NyBil11.RegistreringsAfgift();
+        //    Assert.AreEqual(84525, NyBil111);
+        //}
+        //[TestMethod]
+        //// Bil til 80501 før 2014
+        //public void BilFør2014HøjGrænseRegAfgift()
+        //{
+        //    Bil NyBil2 = new DieselBil("Ford", 80501, 2013, 18.9, "PG 97 357", true, 65);
 
-            double NyBil21 = NyBil2.RegistreringsAfgift();
-            Assert.AreEqual(84526.8, NyBil21);
-        }
+        //    double NyBil21 = NyBil2.RegistreringsAfgift();
+        //    Assert.AreEqual(84526.8, NyBil21);
+        //}
 
-        [TestMethod]
-        // Bil til 81699 efter 2015
-        public void BilEfter2014LavGrænseRegAfgift()
-        {
-            Bil NyBil3 = new DieselBil("Ford", 81699, 2016, 18.9, "PG 97 357", true, 65);
+        //[TestMethod]
+        //// Bil til 81699 efter 2015
+        //public void BilEfter2014LavGrænseRegAfgift()
+        //{
+        //    Bil NyBil3 = new DieselBil("Ford", 81699, 2016, 18.9, "PG 97 357", true, 65);
 
-            double NyBil31 = NyBil3.RegistreringsAfgift();
-            Assert.AreEqual(85783.95, NyBil31);
-        }
+        //    double NyBil31 = NyBil3.RegistreringsAfgift();
+        //    Assert.AreEqual(85783.95, NyBil31);
+        //}
 
-        [TestMethod]
-        // Bil til 81700 efter 2015
-        public void BilEfter2014PåGrænsenRegAfgift()
-        {
-            Bil NyBil12 = new DieselBil("Ford", 81700, 2016, 18.9, "PG 97 357", true, 65);
+        //[TestMethod]
+        //// Bil til 81700 efter 2015
+        //public void BilEfter2014PåGrænsenRegAfgift()
+        //{
+        //    Bil NyBil12 = new DieselBil("Ford", 81700, 2016, 18.9, "PG 97 357", true, 65);
 
-            double NyBil112 = NyBil12.RegistreringsAfgift();
-            Assert.AreEqual(85785, NyBil112);
-        }
-        [TestMethod]
-        // Bil til 81701 efter 2015
-        public void BilEfter2014HøjGrænseRegAfgift()
-        {
-            Bil NyBil4 = new DieselBil("Ford", 81701, 2016, 18.9, "PG 97 357", true, 65);
+        //    double NyBil112 = NyBil12.RegistreringsAfgift();
+        //    Assert.AreEqual(85785, NyBil112);
+        //}
+        //[TestMethod]
+        //// Bil til 81701 efter 2015
+        //public void BilEfter2014HøjGrænseRegAfgift()
+        //{
+        //    Bil NyBil4 = new DieselBil("Ford", 81701, 2016, 18.9, "PG 97 357", true, 65);
 
-            double NyBil41 = NyBil4.RegistreringsAfgift();
-            Assert.AreEqual(85786.8, NyBil41);
-        }
+        //    double NyBil41 = NyBil4.RegistreringsAfgift();
+        //    Assert.AreEqual(85786.8, NyBil41);
+        //}
         #endregion
         #endregion
 
