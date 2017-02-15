@@ -193,7 +193,7 @@ namespace UnitTestProject1
             DieselBil Bil3 = new DieselBil("Toyota", 200000, 2015, 10.1, "OS 79 375", true, 65);
 
             int Bil13 = Bil3.GetHalvÅrligEjerafgift();
-            Assert.AreEqual(0, Bil13); 
+            Assert.AreEqual(2000, Bil13); 
         }
 
         [TestMethod]
@@ -309,7 +309,7 @@ namespace UnitTestProject1
         #region Ladetid
         [TestMethod]
         // Ladetid for elbil
-        public void ElbilRækkevidde()
+        public void ElbilLadeTid()
         {
             var elbil1 = new ElBil("Tesla", 300000, 2016, "KS 35 975", 400, 7);
 
