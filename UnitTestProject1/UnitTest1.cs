@@ -207,13 +207,24 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        // Bieselbil med partikelfilter over 25 km/l
+        // Dieselbil med partikelfilter over 25 km/l
         public void DieselBilMedPartikelFilterLangAfstandEjerAfgift()
         {
             DieselBil Bil5 = new DieselBil("Toyota", 200000, 2015, 30, "OS 79 375", true, 65);
 
             int Bil15 = Bil5.GetHalvÅrligEjerafgift();
             Assert.AreEqual(350, Bil15);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        // Bil med købspris ex moms på 0 kroner
+        public void BilMedKøbsPrisPåNul()
+        {
+            var Bil6 = new DieselBil("Toyota", 0, 2015, 30, "OS 79 375", true, 65);
+
+            int Bil16 = Bil6.GetHalvÅrligEjerafgift();
+            
         }
         #endregion
 

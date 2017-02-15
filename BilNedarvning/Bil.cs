@@ -21,29 +21,29 @@ namespace BilNedarvning
         /// <returns></returns>
         public virtual double RegistreringsAfgift()
         {
-            if (KøbsÅr <= 2014 && BilPrisExAfgift < 80500)
+            if (KøbsÅr <= 2014 && BilPrisExAfgift < 80500 && BilPrisExAfgift >=0)
             {
                 double RegistreringsAfgiften = (1.05 * BilPrisExAfgift);
                 return RegistreringsAfgiften;
             }
-            else if (KøbsÅr <= 2014 && BilPrisExAfgift >= 80500)
+            else if (KøbsÅr <= 2014 && BilPrisExAfgift >= 80500 && BilPrisExAfgift >=0)
             {
                 double RegistreringsAfgiften = ((1.05 * 80500) + (1.80 * (BilPrisExAfgift - 80500)));
                 return RegistreringsAfgiften;
             }
-            else if (KøbsÅr >= 2015 && BilPrisExAfgift < 81700)
+            else if (KøbsÅr >= 2015 && BilPrisExAfgift < 81700 && BilPrisExAfgift >=0)
             {
                 double RegistreringsAfgiften = (1.05 * BilPrisExAfgift);
                 return RegistreringsAfgiften;
             }
-            else if (KøbsÅr >= 2015 && BilPrisExAfgift >= 81700)
+            else if (KøbsÅr >= 2015 && BilPrisExAfgift >= 81700 && BilPrisExAfgift >=0)
             {
                 double RegistreringsAfgiften = ((1.05 * 81700) + (1.80 * (BilPrisExAfgift - 81700)));
                 return RegistreringsAfgiften;
             }
             else
             {
-                return 0;
+                throw new ArgumentException("Prisen må ikke være 0 eller lavere");
             }
         }
 #endregion
