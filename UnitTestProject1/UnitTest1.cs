@@ -193,7 +193,7 @@ namespace UnitTestProject1
             DieselBil Bil3 = new DieselBil("Toyota", 200000, 2015, 10.1, "OS 79 375", true, 65);
 
             int Bil13 = Bil3.GetHalvÅrligEjerafgift();
-            Assert.AreEqual(2000, Bil13); 
+            Assert.AreEqual(0, Bil13); 
         }
 
         [TestMethod]
@@ -277,7 +277,7 @@ namespace UnitTestProject1
 
         #region Rækkevidde
         [TestMethod]
-        // Rækkevidden for benzin- og dieselbil
+        // Rækkevidden for dieselbil
         public void DieselBilRækkeVidde()
         {
             var Bil20 = new DieselBil("Toyota", 200000, 2015, 10.1, "OS 79 375", true, 65);
@@ -286,6 +286,15 @@ namespace UnitTestProject1
             Assert.AreEqual(656.5, Bil21);
         }
 
+        [TestMethod]
+        // Række for benzinbil
+        public void BenzinBilRækkeVidde()
+        {
+            var Bil40 = new BenzinBil("Toyota", 200000, 2015, 10.1, "OS 79 375", 65);
+
+            double Bil41 = Bil40.RækkeVidde();
+            Assert.AreEqual(656.5, Bil41);
+        }
         [TestMethod]
         // Rækkevidden for elbil
         public void ElBilRækkeVidde()
